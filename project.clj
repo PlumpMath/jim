@@ -10,6 +10,7 @@
                  [org.clojure/clojurescript "1.8.51"]
                  [devcards "0.2.1-7"]
                  [sablono "0.7.1"]
+                ;  [org.clojure/core.async "0.2.385"]
 
                  ;; need to specify this for sablono
                  ;; when not using devcards
@@ -55,6 +56,4 @@
   :figwheel {:css-dirs         ["resources/public/css"]
              :http-server-root "public"                     ;; this will be in resources/
              :server-port      3449                         ;; default is 3449
-             :server-ip        "localhost"                  ;; default is "localhost"
-             }
-  )
+             :server-ip        "localhost"})                  ;; default is "localhost"
