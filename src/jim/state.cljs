@@ -21,11 +21,11 @@
 
 (defmethod process-event :click
   [event]
-  (js/alert "click"))
+  (text! (nth event 1) "You clicked!"))
 
 (defmethod process-event :click-too
   [event]
-  (js/alert "click too"))
+  (text! (nth event 1) "You clicked the other one too!"))
 
 ; (defn process-event
 ;   [[event-type]]
