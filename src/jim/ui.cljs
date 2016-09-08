@@ -12,8 +12,8 @@
   (html [:div {} "APP"
           (my-new-card state)
           [:input {:type "button"
-                   :on-click #(state/emit state/pipe [:click 1 1])
+                   :on-click #(state/emit state/pipe [:click state])
                    :value "Press me"}]
           [:input {:type "button"
-                   :on-click #(state/emit state/pipe [:click-too 2 2])
+                   :on-click #(state/emit state/pipe [:click-too state])
                    :value "Press me too"}]]))

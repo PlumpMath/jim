@@ -21,18 +21,11 @@
 
 (defmethod process-event :click
   [event]
-  (js/alert "click"))
+  (text! (nth event 1) "You clicked!"))
 
 (defmethod process-event :click-too
   [event]
-  (js/alert "click too"))
-
-; (defn process-event
-;   [[event-type]]
-;   (case event-type
-;     :click (js/alert "click")
-;     :click-too (js/alert "click too")
-;     (println "NO DISPATCH FOR " (str event-type))))
+  (text! (nth event 1) "You clicked the other one too!"))
 
 (defn process-pipe [channel]
   (go-loop []
