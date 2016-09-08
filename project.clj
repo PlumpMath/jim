@@ -14,11 +14,9 @@
 
                  ;; need to specify this for sablono
                  ;; when not using devcards
-                 [cljsjs/react "15.0.2-0"]
-                 [cljsjs/react-dom "15.0.2-0"]
-                 [cljsjs/react-dom-server "15.0.2-0"]
-                 #_[org.omcljs/om "0.9.0"]
-                 #_[reagent "0.5.1"]]
+                 [cljsjs/react-with-addons "15.0.2-0"
+                    :exclude [cljsjs/react-dom]]
+                 [cljsjs/react-dom "15.0.2-0"]]
 
 
   :plugins [[lein-figwheel "0.5.6"]

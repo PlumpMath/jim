@@ -7,6 +7,7 @@
 
 (enable-console-print!)
 
+
 (defn main []
   ;; conditionally start the app based on whether the #main-app-area
   ;; node is on the page
@@ -14,9 +15,7 @@
     (state/process-pipe state/pipe)
     (add-watch state/app-state
                :render
-               #(do
-                  (println "Watcher")
-                  (js/ReactDOM.render (ui/app state/app-state) node)))
+               #(js/ReactDOM.render (ui/app state/app-state) node))
     (js/ReactDOM.render (ui/app state/app-state) node)))
 
 (main)

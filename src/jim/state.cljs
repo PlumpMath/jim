@@ -11,6 +11,11 @@
 (defn text! [state value]
   (swap! state assoc :text value))
 
+; (swap! s #(-> %
+;             (assoc :ui 0)
+;             (assoc-in [:a :b] 9)))
+
+
 (defonce pipe (chan pipe))
 
 (defn emit [channel message]
